@@ -1,8 +1,47 @@
 import styled from "styled-components";
-import { Cor5 } from "../../Components/Variaveis";
+import { Font } from "../../Components/Variaveis";
 
 export const Main = styled.main`
-  width: 100%;
-  height: 100vh;
-  background-color: ${Cor5};
+  max-width: 100%;
+  max-height: 100vh;
+  background-color: ${(props) => props.theme.colors.corPrimeira};
+`;
+
+export const Container = styled.section`
+  width: 730px;
+  height: 586px;
+  box-sizing: border-box;
+  margin: 144px auto 0px auto;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100;
+    align-items: center;
+    h1 {
+      font-size: 26px;
+      letter-spacing: 0px;
+      font-family: ${Font};
+      color: ${(props) => props.theme.colors.corTexto};
+    }
+    > div {
+      button {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        background-color: ${(props) => props.theme.colors.corPrimeira};
+        cursor: pointer;
+        span {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 13px;
+          letter-spacing: 2.5px;
+          color: ${(props) => props.theme.colors.corTexto};
+        }
+        img {
+        }
+      }
+    }
+  }
 `;
