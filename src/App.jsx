@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import Home from "./Paginas/Home";
-import { Cor4, Cor5, Cor7, Cor8 } from "./Components/Variaveis";
+import { Cor4, Cor5, Cor6, Cor7, Cor8, Cor9 } from "./Components/Variaveis";
 import { useState } from "react";
 
 function App() {
@@ -10,12 +10,14 @@ function App() {
       colors: {
         corPrimeira: Cor5,
         corTexto: Cor4,
+        corContainer: Cor6,
       },
     },
     Dark: {
       colors: {
         corPrimeira: Cor8,
         corTexto: Cor7,
+        corContainer: Cor9,
       },
     },
   };

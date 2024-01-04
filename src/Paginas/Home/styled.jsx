@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Font } from "../../Components/Variaveis";
 
 export const Main = styled.main`
-  max-width: 100%;
-  max-height: 100vh;
+  min-width: 100%;
+  min-height: 100vh;
   background-color: ${(props) => props.theme.colors.corPrimeira};
 `;
 
@@ -11,9 +11,10 @@ export const Container = styled.section`
   width: 730px;
   height: 586px;
   box-sizing: border-box;
-  margin: 144px auto 0px auto;
+  margin: 0 auto;
+  padding-top: 144px;
 
-  > div {
+  > header {
     display: flex;
     justify-content: space-between;
     width: 100;
