@@ -6,7 +6,6 @@ import InputBusca from "../../Components/InputBusca";
 
 export default function Home({ tema, setTema }) {
   const TemaLayouts = (tema) => (tema === "Light" ? "Dark" : "Light");
-
   const MudarTema = () => {
     setTema(TemaLayouts);
   };
