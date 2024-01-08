@@ -8,6 +8,23 @@ export const Container = styled.section`
   height: 444px;
   width: 730px;
   padding-top: 48px;
+  display: flex;
+  align-items: top;
+  > div {
+    width: 200px;
+    img {
+      width: 117px;
+      height: 117px;
+      margin-left: 20px;
+      border-radius: 50%;
+    }
+  }
+`;
+export const ContainerNome = styled.div`
+  display: flex;
+  align-items: top;
+  display: flex;
+  gap: 20px;
   > div {
     img {
       width: 117px;
@@ -16,31 +33,22 @@ export const Container = styled.section`
       margin: 0px 32px;
     }
   }
-  > div {
-    display: flex;
-    align-items: top;
-    > div {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
 
-      h2 {
-        font-family: ${Font};
-        font-weight: bold;
-        font-size: 26px;
-        color: ${(props) => props.theme.colors.corTexto};
-      }
-      span {
-        font-family: ${Font};
-        font-size: 16px;
-        color: ${Cor1};
-      }
-      p {
-        font-family: ${Font};
-        font-size: 15px;
-        color: ${(props) => props.theme.colors.corTextoDois};
-      }
-    }
+  h2 {
+    font-family: ${Font};
+    font-weight: bold;
+    font-size: 26px;
+    color: ${(props) => props.theme.colors.corTexto};
+  }
+  span {
+    font-family: ${Font};
+    font-size: 16px;
+    color: ${Cor1};
+  }
+  p {
+    font-family: ${Font};
+    font-size: 15px;
+    color: ${(props) => props.theme.colors.corTextoDois};
   }
 `;
 export const ContainerUser = styled.div`

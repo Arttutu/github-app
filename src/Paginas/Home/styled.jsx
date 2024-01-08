@@ -45,4 +45,7 @@ export const Container = styled.section`
       }
     }
   }
+  @media (max-width: 768px) {
+    width: 573px;
+  }
 `;

@@ -38,4 +38,8 @@ export const ContainerInput = styled.section`
   > img {
     margin: 0px 32px;
   }
+  @media (max-width: 768px) {
+    width: 573px;
+    height: 69px;
+  }
 `;
