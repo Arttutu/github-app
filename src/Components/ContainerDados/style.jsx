@@ -8,50 +8,56 @@ export const Container = styled.section`
   height: 444px;
   width: 730px;
   padding-top: 48px;
-  display: flex;
-  align-items: top;
-  > div {
-    width: 200px;
-    img {
-      width: 117px;
-      height: 117px;
-      margin-left: 20px;
-      border-radius: 50%;
-    }
+  @media (max-width: 768px) {
+    width: 573px;
+    height: 481px;
   }
 `;
 export const ContainerNome = styled.div`
   display: flex;
-  align-items: top;
-  display: flex;
-  gap: 20px;
+  justify-content: space-around;
   > div {
     img {
       width: 117px;
       height: 117px;
       border-radius: 50%;
-      margin: 0px 32px;
+      margin-left: 48px;
+    }
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      h2 {
+        font-family: ${Font};
+        font-weight: bold;
+        font-size: 26px;
+        color: ${(props) => props.theme.colors.corTexto};
+      }
+      span {
+        font-family: ${Font};
+        font-size: 16px;
+        color: ${Cor1};
+      }
     }
   }
 
-  h2 {
-    font-family: ${Font};
-    font-weight: bold;
-    font-size: 26px;
-    color: ${(props) => props.theme.colors.corTexto};
-  }
-  span {
-    font-family: ${Font};
-    font-size: 16px;
-    color: ${Cor1};
-  }
-  p {
-    font-family: ${Font};
-    font-size: 15px;
-    color: ${(props) => props.theme.colors.corTextoDois};
+  @media (max-width: 768px) {
+    width: auto;
+    > div {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 `;
 export const ContainerUser = styled.div`
+  margin-top: 32px;
+  margin-left: 150px;
   width: 480px;
   height: 85px;
   display: flex;
@@ -72,22 +78,28 @@ export const ContainerUser = styled.div`
     }
     p {
       font-weight: bold;
+      font-family: ${Font};
       font-size: 22px;
+      color: ${(props) => props.theme.colors.corTextoDois};
     }
+  }
+  @media (max-width: 768px) {
+    width: 493px;
+    margin: 32px auto 0 auto;
   }
 `;
 export const ContainerInfo = styled.div`
-  margin-top: 10px;
+  margin-top: 37px;
+  margin-left: 150px;
   > div {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
     justify-content: space-between;
+    width: 480px;
     > div {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       h4 {
         font-family: ${Font};
         font-size: 15px;
@@ -100,5 +112,9 @@ export const ContainerInfo = styled.div`
         fill: ${(props) => props.theme.colors.corTexto};
       }
     }
+  }
+  @media (max-width: 768px) {
+    width: 493px;
+    margin-left: 32px;
   }
 `;

@@ -16,16 +16,24 @@ export default function ContainerDados({ usuario }) {
       {usuario ? (
         <>
           <div>
-            <img src={usuario.avatar_url} alt={`Avatar de ${usuario.login}`} />
-          </div>
-          <div>
             <ContainerNome>
               <div>
-                <h2>{usuario.name}</h2>
-                <span>@{usuario.login}</span>
-                <p>{usuario.bio}</p>
+                <img
+                  src={usuario.avatar_url}
+                  alt={`Avatar de ${usuario.login}`}
+                />
+              </div>
+              <div>
+                <div>
+                  <h2>{usuario.name}</h2>
+                  <span>@{usuario.login}</span>
+                </div>
+                <div>
+                  <span>{usuario.created_at}</span>
+                </div>
               </div>
             </ContainerNome>
+            <p>{usuario.bio}</p>
             <ContainerUser>
               <div>
                 <h3>Repositorio</h3>
