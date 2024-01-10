@@ -48,4 +48,9 @@ export const Container = styled.section`
   @media (max-width: 768px) {
     width: 573px;
   }
+  @media (max-width: 525px) {
+    padding-top: 31px;
+    width: 327px;
+    height: 38px;
+  }
 `;

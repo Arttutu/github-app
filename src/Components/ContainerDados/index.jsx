@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Bio,
   Container,
   ContainerInfo,
   ContainerNome,
@@ -23,7 +24,7 @@ export default function ContainerDados({ usuario }) {
                   alt={`Avatar de ${usuario.login}`}
                 />
               </div>
-              <div>
+              <div className="usuario_info">
                 <div>
                   <h2>{usuario.name}</h2>
                   <span>@{usuario.login}</span>
@@ -33,7 +34,9 @@ export default function ContainerDados({ usuario }) {
                 </div>
               </div>
             </ContainerNome>
-            <p>{usuario.bio}</p>
+            <Bio>
+              <p>{usuario.bio}</p>
+            </Bio>
             <ContainerUser>
               <div>
                 <h3>Repositorio</h3>

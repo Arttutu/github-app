@@ -13,26 +13,37 @@ export const Container = styled.section`
     height: 481px;
   }
 `;
+export const Bio = styled.div`
+  margin-left: 202px;
+  margin-top: 24px;
+  > p {
+    font-family: ${Font};
+    font-size: 15px;
+    color: ${(props) => props.theme.colors.corTexto};
+  }
+  @media (max-width: 768px) {
+    margin-left: 32px;
+  }
+`;
 export const ContainerNome = styled.div`
   display: flex;
-  justify-content: space-around;
+  align-items: center;
   > div {
     img {
+      margin-left: 48px;
       width: 117px;
       height: 117px;
       border-radius: 50%;
-      margin-left: 48px;
     }
   }
-  > div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    > div {
+  div {
+    &.usuario_info {
       display: flex;
-      flex-direction: column;
-      gap: 5px;
+      align-items: center;
+      justify-content: start;
+      min-width: 480px;
+      margin-left: 37px;
+      gap: 138px;
       h2 {
         font-family: ${Font};
         font-weight: bold;
@@ -49,15 +60,31 @@ export const ContainerNome = styled.div`
 
   @media (max-width: 768px) {
     width: auto;
+    justify-content: start;
+    gap: 37px;
     > div {
-      flex-direction: column;
-      justify-content: center;
+      img {
+        margin-left: 40px;
+      }
+    }
+    > div {
+      &.usuario_info {
+        min-width: 200px;
+        flex-direction: column;
+        align-items: normal;
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+        gap: 15px;
+      }
     }
   }
 `;
 export const ContainerUser = styled.div`
   margin-top: 32px;
-  margin-left: 150px;
+  margin-left: 202px;
   width: 480px;
   height: 85px;
   display: flex;
@@ -67,6 +94,7 @@ export const ContainerUser = styled.div`
   gap: 100px;
   border-radius: 10px;
   background-color: ${(props) => props.theme.colors.corPrimeira};
+
   > div {
     display: flex;
     flex-direction: column;
@@ -90,7 +118,7 @@ export const ContainerUser = styled.div`
 `;
 export const ContainerInfo = styled.div`
   margin-top: 37px;
-  margin-left: 150px;
+  margin-left: 202px;
   > div {
     display: flex;
     align-items: center;
@@ -107,9 +135,8 @@ export const ContainerInfo = styled.div`
       }
       img {
         margin: 0px;
-        width: 30px;
-        height: 30px;
-        fill: ${(props) => props.theme.colors.corTexto};
+        width: 20px;
+        height: 20px;
       }
     }
   }

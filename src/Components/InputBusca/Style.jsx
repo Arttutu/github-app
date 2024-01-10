@@ -42,4 +42,9 @@ export const ContainerInput = styled.section`
     width: 573px;
     height: 69px;
   }
+  @media (max-width: 525px) {
+    width: 327px;
+    height: 60px;
+    margin: 36px auto 0 auto;
+  }
 `;
