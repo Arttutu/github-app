@@ -46,5 +46,13 @@ export const ContainerInput = styled.section`
     width: 327px;
     height: 60px;
     margin: 36px auto 0 auto;
+    > input {
+      font-size: 13px;
+    }
+    > img {
+      width: 17px;
+      height: 17px;
+      margin: 0px 17px;
+    }
   }
 `;

@@ -36,7 +36,7 @@ export default function InputBusca() {
           alt="Icone de Lupa para buscar um usuário do GitHub"
         ></img>
         <input
-          placeholder="Buscar usuário do GitHub por nome"
+          placeholder="Buscar GitHub por id..."
           value={termoBusca}
           onChange={handleInputChange}
         ></input>

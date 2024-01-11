@@ -29,8 +29,8 @@ export default function ContainerDados({ usuario }) {
                   <h2>{usuario.name}</h2>
                   <span>@{usuario.login}</span>
                 </div>
-                <div>
-                  <span>{usuario.created_at}</span>
+                <div className="data_cadastro">
+                  <span className="data">{usuario.created_at}</span>
                 </div>
               </div>
             </ContainerNome>
@@ -54,7 +54,11 @@ export default function ContainerDados({ usuario }) {
             <ContainerInfo>
               <div>
                 <div>
-                  <img src={locationIcon} />
+                  <img
+                    src={locationIcon}
+                    className="location_icon"
+                    alt="icone de lugar"
+                  />
                   <h4>
                     {usuario.location != null
                       ? usuario.location
@@ -62,7 +66,7 @@ export default function ContainerDados({ usuario }) {
                   </h4>
                 </div>
                 <div>
-                  <img src={twitterIcon} />
+                  <img src={twitterIcon} alt="icone do twitter" />
                   <h4>
                     {usuario.twitter_username != null
                       ? usuario.twitter_username
@@ -74,13 +78,13 @@ export default function ContainerDados({ usuario }) {
             <ContainerInfo>
               <div>
                 <div>
-                  <img src={webIcon} />
+                  <img src={webIcon} alt="icone de link de um site" />
                   <h4>
                     {usuario.blog != null ? usuario.blog : " não disponível"}
                   </h4>
                 </div>
                 <div>
-                  <img src={companyIcon} />
+                  <img src={companyIcon} alt="icone de uma empresa" />
                   <h4>
                     {usuario.company != null
                       ? usuario.company

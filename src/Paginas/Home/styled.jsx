@@ -5,9 +5,13 @@ export const Main = styled.main`
   min-width: 100%;
   min-height: 100vh;
   background-color: ${(props) => props.theme.colors.corPrimeira};
+  @media (max-width: 525px) {
+    width: 100vw;
+    height: 100vh;
+  }
 `;
 
-export const Container = styled.section`
+export const Container = styled.div`
   width: 730px;
   height: 586px;
   box-sizing: border-box;
