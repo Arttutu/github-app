@@ -18,6 +18,7 @@ function App() {
       colors: {
         corPrimeira: Cor5,
         corTexto: Cor4,
+        corSpan: Cor8,
         corTextoDois: Cor3,
         corContainer: Cor6,
       },
@@ -26,6 +27,7 @@ function App() {
       colors: {
         corPrimeira: Cor8,
         corTexto: Cor7,
+        corSpan: Cor6,
         corTextoDois: Cor7,
         corContainer: Cor9,
       },

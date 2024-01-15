@@ -12,6 +12,16 @@ import twitterIcon from "./icon-twitter.svg";
 import companyIcon from "./icon-company.svg";
 
 export default function ContainerDados({ usuario }) {
+  if (usuario != null) {
+    var dataAPI = usuario.created_at;
+    var data = new Date(dataAPI);
+    var dataFormatada = data.toLocaleString("pt-BR", {
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+    });
+  }
+
   return (
     <Container>
       {usuario ? (
@@ -29,8 +39,8 @@ export default function ContainerDados({ usuario }) {
                   <h2>{usuario.name}</h2>
                   <span>@{usuario.login}</span>
                 </div>
-                <div className="data_cadastro">
-                  <span className="data">{usuario.created_at}</span>
+                <div>
+                  <span>Entrou {dataFormatada}</span>
                 </div>
               </div>
             </ContainerNome>
@@ -79,9 +89,11 @@ export default function ContainerDados({ usuario }) {
               <div>
                 <div>
                   <img src={webIcon} alt="icone de link de um site" />
-                  <h4>
-                    {usuario.blog != null ? usuario.blog : " não disponível"}
-                  </h4>
+                  <a href={usuario.blog} target="_blank">
+                    <h4 className="link">
+                      {usuario.blog != null ? usuario.blog : " não disponível"}
+                    </h4>
+                  </a>
                 </div>
                 <div>
                   <img src={companyIcon} alt="icone de uma empresa" />

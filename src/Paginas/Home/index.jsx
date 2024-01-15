@@ -16,7 +16,7 @@ export default function Home({ tema, setTema }) {
         <header>
           <h1 title="devfinder">devfinder</h1>
           <div>
-            <button onClick={() => MudarTema()}>
+            <button tema={tema} onClick={() => MudarTema()}>
               <span>{tema === "Light" ? "Light" : "Dark"}</span>
               <img
                 src={tema === "Light" ? lua : sol}

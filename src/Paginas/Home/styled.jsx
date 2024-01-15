@@ -6,8 +6,8 @@ export const Main = styled.main`
   min-height: 100vh;
   background-color: ${(props) => props.theme.colors.corPrimeira};
   @media (max-width: 525px) {
-    width: 100vw;
-    height: 100vh;
+    width: 375px;
+    height: 777px;
   }
 `;
 
@@ -25,6 +25,7 @@ export const Container = styled.div`
     align-items: center;
     h1 {
       font-size: 26px;
+      font-weight: bold;
       letter-spacing: 0px;
       font-family: ${Font};
       color: ${(props) => props.theme.colors.corTexto};
@@ -37,6 +38,9 @@ export const Container = styled.div`
         border: none;
         background-color: ${(props) => props.theme.colors.corPrimeira};
         cursor: pointer;
+        :hover {
+          color: ${(props) => (props.tema === "light" ? "#222731" : "#90A4D4")};
+        }
         span {
           text-transform: uppercase;
           font-weight: bold;
@@ -45,6 +49,7 @@ export const Container = styled.div`
           color: ${(props) => props.theme.colors.corTexto};
         }
         img {
+          color: ${(props) => props.theme.colors.corTexto};
         }
       }
     }

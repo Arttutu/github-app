@@ -31,7 +31,7 @@ export const Bio = styled.div`
 `;
 export const ContainerNome = styled.div`
   display: flex;
-  align-items: center;
+
   > div {
     img {
       margin-left: 48px;
@@ -40,14 +40,15 @@ export const ContainerNome = styled.div`
       border-radius: 50%;
     }
   }
-  div {
-    &.usuario_info {
+  &.usuario_info {
+    div {
       display: flex;
-      align-items: center;
+      align-items: top;
       justify-content: start;
       min-width: 480px;
       margin-left: 37px;
       gap: 138px;
+
       h2 {
         font-family: ${Font};
         font-weight: bold;
@@ -61,6 +62,7 @@ export const ContainerNome = styled.div`
       }
     }
   }
+
   > div {
     &.data {
       font-family: ${Font};
@@ -163,6 +165,13 @@ export const ContainerInfo = styled.div`
       display: flex;
       align-items: center;
       gap: 10px;
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+          text-decoration: dashed;
+        }
+      }
       h4 {
         font-family: ${Font};
         font-size: 15px;
