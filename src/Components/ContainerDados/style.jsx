@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Cor1, Font } from "../Variaveis";
+import { Cor1, Cor4, Font } from "../Variaveis";
 
 export const Container = styled.section`
   background-color: ${(props) => props.theme.colors.corContainer};
@@ -14,7 +14,7 @@ export const Container = styled.section`
   }
   @media (max-width: 525px) {
     width: 327px;
-    height: 517px;
+    min-height: 600px;
   }
 `;
 export const Bio = styled.div`
@@ -25,95 +25,102 @@ export const Bio = styled.div`
     font-size: 15px;
     color: ${(props) => props.theme.colors.corTexto};
   }
+
   @media (max-width: 768px) {
     margin-left: 32px;
+    > p {
+      max-width: 279px;
+      font-size: 13px;
+    }
   }
 `;
 export const ContainerNome = styled.div`
   display: flex;
-
+  justify-content: space-between;
+  width: 480px;
   > div {
-    img {
-      margin-left: 48px;
-      width: 117px;
-      height: 117px;
-      border-radius: 50%;
-    }
-  }
-  &.usuario_info {
-    div {
-      display: flex;
-      align-items: top;
-      justify-content: start;
-      min-width: 480px;
-      margin-left: 37px;
-      gap: 138px;
-
-      h2 {
-        font-family: ${Font};
-        font-weight: bold;
-        font-size: 26px;
-        color: ${(props) => props.theme.colors.corTexto};
-      }
-      span {
-        font-family: ${Font};
-        font-size: 16px;
-        color: ${Cor1};
-      }
-    }
-  }
-
-  > div {
-    &.data {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    h2 {
       font-family: ${Font};
-      font-size: 15px;
+      font-weight: bold;
+      font-size: 26px;
+      max-width: 176px;
       color: ${(props) => props.theme.colors.corTexto};
+    }
+    &.login {
+      font-family: ${Font};
+      font-size: 16px;
+      color: ${Cor1};
+    }
+  }
+  > div {
+    span {
+      font-family: ${Font};
+      font-size: 16px;
+      width: 166px;
+      color: ${(props) => props.theme.colors.corSpan};
     }
   }
 
   @media (max-width: 768px) {
-    width: auto;
+    width: 200px;
     justify-content: start;
     gap: 37px;
-    > div {
-      img {
-        margin-left: 40px;
-      }
-    }
-    > div {
-      &.usuario_info {
-        min-width: 200px;
+
+    div {
+      min-width: 200px;
+      flex-direction: column;
+      align-items: normal;
+      > div {
+        display: flex;
         flex-direction: column;
-        align-items: normal;
-        > div {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-        }
         gap: 15px;
       }
     }
   }
   @media (max-width: 525px) {
+    flex-direction: column;
+    width: 100px;
+
     > div {
-      img {
-        width: 70px;
-        height: 70px;
+      max-width: 100px;
+      h2 {
+        font-size: 16px;
       }
     }
-    div {
-      &.usuario_info {
-        h2 {
-          font-size: 16px;
-        }
+    > div {
+      span {
+        width: 150px;
+        font-size: 13px;
       }
+    }
+  }
+`;
+export const ContainerImagem = styled.div`
+  display: flex;
+
+  img {
+    margin-left: 48px;
+    margin-right: 37px;
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+  }
+  @media (max-width: 525px) {
+    img {
+      margin-left: 24px;
+      margin-right: 19px;
     }
   }
 `;
 export const ContainerUser = styled.div`
   margin-top: 32px;
   margin-left: 202px;
-  width: 480px;
+  max-width: 480px;
   height: 85px;
   display: flex;
   align-items: center;
@@ -155,7 +162,7 @@ export const ContainerUser = styled.div`
 export const ContainerInfo = styled.div`
   margin-top: 37px;
   margin-left: 202px;
-
+  max-width: 480px;
   > div {
     display: flex;
     align-items: center;
@@ -176,6 +183,7 @@ export const ContainerInfo = styled.div`
         font-family: ${Font};
         font-size: 15px;
         color: ${(props) => props.theme.colors.corTexto};
+        word-wrap: break-word;
       }
       img {
         fill: ${(props) => props.theme.colors.corTexto};
@@ -198,11 +206,17 @@ export const ContainerInfo = styled.div`
   @media (max-width: 525px) {
     margin-top: 0px;
     margin-left: 24px;
+
     > div {
       align-items: normal;
       flex-direction: column;
       > div {
         margin: 16px 0px;
+        h4 {
+          max-width: 185px;
+          font-size: 13px;
+          word-wrap: break-word;
+        }
       }
     }
   }

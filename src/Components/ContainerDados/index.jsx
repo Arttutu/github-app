@@ -2,6 +2,7 @@ import React from "react";
 import {
   Bio,
   Container,
+  ContainerImagem,
   ContainerInfo,
   ContainerNome,
   ContainerUser,
@@ -27,23 +28,22 @@ export default function ContainerDados({ usuario }) {
       {usuario ? (
         <>
           <div>
-            <ContainerNome>
-              <div>
-                <img
-                  src={usuario.avatar_url}
-                  alt={`Avatar de ${usuario.login}`}
-                />
-              </div>
-              <div className="usuario_info">
+            <ContainerImagem>
+              <img
+                src={usuario.avatar_url}
+                alt={`Avatar de ${usuario.login}`}
+              />
+              <ContainerNome>
                 <div>
                   <h2>{usuario.name}</h2>
-                  <span>@{usuario.login}</span>
+                  <span className="login">@{usuario.login}</span>
                 </div>
                 <div>
                   <span>Entrou {dataFormatada}</span>
                 </div>
-              </div>
-            </ContainerNome>
+              </ContainerNome>
+            </ContainerImagem>
+
             <Bio>
               <p>{usuario.bio}</p>
             </Bio>
@@ -100,7 +100,7 @@ export default function ContainerDados({ usuario }) {
                   <h4>
                     {usuario.company != null
                       ? usuario.company
-                      : " não disponível"}
+                      : "não disponível"}
                   </h4>
                 </div>
               </div>

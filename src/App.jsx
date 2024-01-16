@@ -1,6 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import Home from "./Paginas/Home";
 import {
+  Cor2,
   Cor3,
   Cor4,
   Cor5,
@@ -18,7 +19,7 @@ function App() {
       colors: {
         corPrimeira: Cor5,
         corTexto: Cor4,
-        corSpan: Cor8,
+        corSpan: Cor2,
         corTextoDois: Cor3,
         corContainer: Cor6,
       },
@@ -27,7 +28,7 @@ function App() {
       colors: {
         corPrimeira: Cor8,
         corTexto: Cor7,
-        corSpan: Cor6,
+        corSpan: Cor7,
         corTextoDois: Cor7,
         corContainer: Cor9,
       },
