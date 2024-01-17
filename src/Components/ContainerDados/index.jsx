@@ -36,7 +36,7 @@ export default function ContainerDados({ usuario }) {
               <ContainerNome>
                 <div>
                   <h2>{usuario.name}</h2>
-                  <span className="login">@{usuario.login}</span>
+                  <p>@{usuario.login}</p>
                 </div>
                 <div>
                   <span>Entrou {dataFormatada}</span>

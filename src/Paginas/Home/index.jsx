@@ -13,7 +13,7 @@ export default function Home({ tema, setTema }) {
   return (
     <Main>
       <Container>
-        <header>
+        <div>
           <h1 title="devfinder">devfinder</h1>
           <div>
             <button tema={tema} onClick={() => MudarTema()}>
@@ -24,7 +24,7 @@ export default function Home({ tema, setTema }) {
               />
             </button>
           </div>
-        </header>
+        </div>
         <InputBusca />
       </Container>
     </Main>

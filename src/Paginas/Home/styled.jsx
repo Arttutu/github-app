@@ -6,8 +6,8 @@ export const Main = styled.main`
   min-height: 100vh;
   background-color: ${(props) => props.theme.colors.corPrimeira};
   @media (max-width: 525px) {
-    width: 375px;
-    height: 777px;
+    max-width: 375px;
+    min-height: 900px;
   }
 `;
 
@@ -18,7 +18,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding-top: 144px;
 
-  > header {
+  > div {
     display: flex;
     justify-content: space-between;
     width: 100;

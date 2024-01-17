@@ -34,6 +34,7 @@ export const Bio = styled.div`
     }
   }
 `;
+
 export const ContainerNome = styled.div`
   display: flex;
   justify-content: space-between;
@@ -51,7 +52,7 @@ export const ContainerNome = styled.div`
       max-width: 176px;
       color: ${(props) => props.theme.colors.corTexto};
     }
-    &.login {
+    p {
       font-family: ${Font};
       font-size: 16px;
       color: ${Cor1};
@@ -90,6 +91,9 @@ export const ContainerNome = styled.div`
       max-width: 100px;
       h2 {
         font-size: 16px;
+      }
+      p {
+        font-size: 13px;
       }
     }
     > div {
@@ -162,7 +166,7 @@ export const ContainerUser = styled.div`
 export const ContainerInfo = styled.div`
   margin-top: 37px;
   margin-left: 202px;
-  max-width: 480px;
+  width: 480px;
   > div {
     display: flex;
     align-items: center;
@@ -200,16 +204,16 @@ export const ContainerInfo = styled.div`
     }
   }
   @media (max-width: 768px) {
-    width: 493px;
     margin-left: 32px;
   }
   @media (max-width: 525px) {
     margin-top: 0px;
     margin-left: 24px;
-
+    width: 0px;
     > div {
       align-items: normal;
       flex-direction: column;
+      width: 150px;
       > div {
         margin: 16px 0px;
         h4 {
