@@ -69,7 +69,7 @@ export default function ContainerDados({ usuario }) {
                     className="location_icon"
                     alt="icone de lugar"
                   />
-                  <h4>
+                  <h4 nulo={usuario.location === null}>
                     {usuario.location != null
                       ? usuario.location
                       : " não disponível"}
@@ -77,7 +77,7 @@ export default function ContainerDados({ usuario }) {
                 </div>
                 <div>
                   <img src={twitterIcon} alt="icone do twitter" />
-                  <h4>
+                  <h4 nulo={usuario.twitter_username === null}>
                     {usuario.twitter_username != null
                       ? usuario.twitter_username
                       : " não disponível"}
@@ -90,14 +90,14 @@ export default function ContainerDados({ usuario }) {
                 <div>
                   <img src={webIcon} alt="icone de link de um site" />
                   <a href={usuario.blog} target="_blank">
-                    <h4 className="link">
+                    <h4 className="link" nulo={usuario.blog === null}>
                       {usuario.blog != null ? usuario.blog : " não disponível"}
                     </h4>
                   </a>
                 </div>
                 <div>
                   <img src={companyIcon} alt="icone de uma empresa" />
-                  <h4>
+                  <h4 nulo={usuario.company === null}>
                     {usuario.company != null
                       ? usuario.company
                       : "não disponível"}

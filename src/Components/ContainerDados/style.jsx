@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Cor1, Cor4, Font } from "../Variaveis";
+import { Cor1, Cor2, Cor4, Font } from "../Variaveis";
 
 export const Container = styled.section`
   background-color: ${(props) => props.theme.colors.corContainer};
@@ -88,12 +88,14 @@ export const ContainerNome = styled.div`
     width: 100px;
 
     > div {
-      max-width: 100px;
+      width: 100%;
       h2 {
         font-size: 16px;
+        width: 100px;
       }
       p {
         font-size: 13px;
+        width: 100px;
       }
     }
     > div {
@@ -167,34 +169,41 @@ export const ContainerInfo = styled.div`
   margin-top: 37px;
   margin-left: 202px;
   width: 480px;
+
   > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 480px;
+
     > div {
       display: flex;
       align-items: center;
       gap: 10px;
+
       a {
         cursor: pointer;
         text-decoration: none;
+
         &:hover {
           text-decoration: dashed;
         }
       }
+
       h4 {
         font-family: ${Font};
         font-size: 15px;
-        color: ${(props) => props.theme.colors.corTexto};
+        color: ${(props) => (props.nulo ? Cor2 : props.theme.colors.corTexto)};
         word-wrap: break-word;
       }
+
       img {
         fill: ${(props) => props.theme.colors.corTexto};
         margin: 0px;
         width: 20px;
         height: 20px;
       }
+
       &.location_icon {
         object-fit: cover;
         width: 20px;
@@ -203,19 +212,24 @@ export const ContainerInfo = styled.div`
       }
     }
   }
+
   @media (max-width: 768px) {
     margin-left: 32px;
   }
+
   @media (max-width: 525px) {
     margin-top: 0px;
     margin-left: 24px;
     width: 0px;
+
     > div {
       align-items: normal;
       flex-direction: column;
       width: 150px;
+
       > div {
         margin: 16px 0px;
+
         h4 {
           max-width: 185px;
           font-size: 13px;
