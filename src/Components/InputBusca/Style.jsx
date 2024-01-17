@@ -21,6 +21,13 @@ export const ContainerInput = styled.section`
     font-family: ${Font};
     line-height: 25px;
   }
+  > p {
+    font-family: ${Font};
+    color: #f74646;
+    font-size: 15px;
+
+    margin-right: 24px;
+  }
   > button {
     height: 50px;
     border-radius: 15px;
@@ -47,6 +54,9 @@ export const ContainerInput = styled.section`
     height: 60px;
     margin: 36px auto 0 auto;
     > input {
+      font-size: 13px;
+    }
+    > p {
       font-size: 13px;
     }
     > img {

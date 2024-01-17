@@ -5,7 +5,7 @@ import iconeBusca from "./icon-search.svg";
 import ContainerDados from "../ContainerDados";
 
 export default function InputBusca() {
-  const [usuarioEncontrado, setUsuarioEncontrado] = useState(null);
+  const [usuarioEncontrado, setUsuarioEncontrado] = useState(false);
   const [termoBusca, setTermoBusca] = useState("");
 
   const buscarUsuario = async () => {
@@ -27,6 +27,7 @@ export default function InputBusca() {
   const pesquisar = () => {
     buscarUsuario();
   };
+  const erroUsuario = !usuarioEncontrado ? "sem resultado" : "";
 
   return (
     <>
@@ -40,6 +41,7 @@ export default function InputBusca() {
           value={termoBusca}
           onChange={handleInputChange}
         ></input>
+        <p>{erroUsuario}</p>
         <button onClick={pesquisar}>Buscar</button>
       </ContainerInput>
       <ContainerDados usuario={usuarioEncontrado} />
