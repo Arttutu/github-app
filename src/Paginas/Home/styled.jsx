@@ -5,9 +5,14 @@ export const Main = styled.main`
   min-width: 100%;
   min-height: 100vh;
   background-color: ${(props) => props.theme.colors.corPrimeira};
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    height: auto;
+  }
   @media (max-width: 525px) {
-    max-width: 375px;
-    min-height: 900px;
+    max-width: 100%;
+    max-height: auto;
   }
 `;
 
