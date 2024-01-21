@@ -12,9 +12,8 @@ Projeto foi criado a partir de o desafio proposto pelo site Front-End Mentor. fo
 
 ## Screenshots
 
-![App Screenshot]()
-![App Screenshot]()
-![App Screenshot]()
+![App Screenshot](https://github.com/Arttutu/github-app/blob/main/public/Design/github-tela.png?raw=true)
+![App Screenshot](https://github.com/Arttutu/github-app/blob/main/public/Design/github-tela-desktop.png?raw=true)
 
 ## Autores
 
