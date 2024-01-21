@@ -1,8 +1,8 @@
 # GitHub API Search Desafio
 
-Desenvolvi um site que consome a API do GitHub, uilizando styled-components, desenvolvi uma interface visualmente atraente seguindo layout do figma. O front-end da aplicação foi construído com React, aproveitando todo o poder do JavaScript, enquanto o Axios foi empregado para obter dados da API. Este projeto representou um desafio para mim, no qual aprimorei e treinei minhas habilidades e coloquei em prática, foi muito divertido e desafidor contruir esse site, estou orgulhoso do ptojeto, aprendi efetivamente a consumir a API do GitHub.
+Desenvolvi um site que consome a API do GitHub, utilizando styled-components. Criei uma interface visualmente atraente, seguindo o layout do Figma. O front-end da aplicação foi construído com React, aproveitando todo o poder do JavaScript, enquanto o Axios foi empregado para obter dados da API. Este projeto representou um desafio para mim, no qual aprimorei e treinei minhas habilidades, colocando-as em prática. Foi muito divertido e desafiador construir este site, e estou orgulhoso do projeto. Aprendi efetivamente a consumir a API do GitHub.
 
-Projeto foi criado a partir de o desafio proposto pelo site Front-End Mentor. foi minha inspiração e desafio de aprendizado
+O projeto foi criado a partir do desafio proposto pelo site Front-End Mentor, que serviu como minha inspiração e oportunidade de aprendizado.
 
 ## Referência
 
