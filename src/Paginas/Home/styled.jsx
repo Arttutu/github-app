@@ -12,7 +12,6 @@ export const Main = styled.main`
   }
   @media (max-width: 525px) {
     max-width: 100%;
-    max-height: auto;
   }
 `;
 
@@ -60,11 +59,11 @@ export const Container = styled.div`
     }
   }
   @media (max-width: 768px) {
-    width: 573px;
+    width: 100vw;
+    height: 1000px;
   }
   @media (max-width: 525px) {
     padding-top: 31px;
     width: 327px;
-    height: 38px;
   }
 `;

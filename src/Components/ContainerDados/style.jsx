@@ -73,7 +73,6 @@ export const ContainerNome = styled.div`
     gap: 37px;
 
     div {
-      min-width: 200px;
       flex-direction: column;
       align-items: normal;
       > div {
@@ -85,10 +84,9 @@ export const ContainerNome = styled.div`
   }
   @media (max-width: 525px) {
     flex-direction: column;
-    width: 100px;
-
+    width: auto;
     > div {
-      width: 100%;
+      width: 100px;
       h2 {
         font-size: 16px;
         width: 100px;
